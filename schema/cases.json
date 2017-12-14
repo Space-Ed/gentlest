@@ -1,0 +1,14 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema",
+    "type":"array",
+    "additionalProperties": {
+        "type":"object",
+        "properties": {
+            "argument":{"type":"object"},
+            "result":{"type":"object"},
+            "xfail":{"type":"boolean"},
+            "exceptionMessage":{"type":"string"}
+        }
+    }
+    
+}

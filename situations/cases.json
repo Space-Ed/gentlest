@@ -1,0 +1,29 @@
+[
+    {
+        "argument": {
+            "name":"Edward"
+        },
+        "result": {
+            "coolness" :"Very"
+        }
+    },
+
+    {
+        "argument": {
+            "name": "Gerald"
+        },
+        "result": {
+            "coolness": "Hardly"
+        }
+    },
+
+    {
+        "argument": {
+            "name": "Bobskin"
+        },
+        "result": {
+            "lameness": "Very"
+        }
+    }
+
+]

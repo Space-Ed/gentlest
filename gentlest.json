@@ -1,0 +1,6 @@
+
+{    
+    "rootDir":"situations",
+    "caseFileName":"cases.json",
+    "testFiles": "**/*[tT]est.ts"
+}
