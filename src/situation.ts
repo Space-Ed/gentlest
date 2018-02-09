@@ -50,6 +50,7 @@ export class TestSituation {
         this.meta = testModule.meta || {}
         this.meta.name = testModule.name
 
+        
         const argSchema = TJS.generateSchema(program, "Argument", settings);
         const resultSchema = TJS.generateSchema(program, "Result", settings);
 
@@ -65,22 +66,19 @@ export class TestSituation {
         this.resultSchema = resultSchema
     }
     
+    loadCases() {
+        let cases = fse.readJSONSync(path.join(this.dir, this.config.caseFileName))
+
+        cases.forEach((testCase:Case) => {
+            this.addCase(testCase)
+        })
+    }
+    
     addCase(testCase: Case) {
         console.log('adding new case', testCase)
         let newCase = new TestCase(this, testCase)
         newCase.index = this.cases.length
         this.cases.push(newCase)
-    }
-
-    loadCases() {
-
-        let cases = fse.readJSONSync(path.join(this.dir, this.config.caseFileName))
-        cases.forEach((testCase) => {
-            this.addCase(testCase)
-        })
-
-        //load files, creating situation cases
-
     }
 
     reloadCases(){

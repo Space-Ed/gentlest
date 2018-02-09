@@ -1,13 +1,16 @@
-## Gentlest
+## bestest
 
-The test runner for gentlepersons
+## The ultimate testing environment will enable developers to 
 
-### rules of the gentry
-- one does not mix up test case data with execution scenarios
-- one prefers to not touch cases instead delegating generators to create them
-- one uses Typescript interfaces to create schema
-
-A test runner for generative prompt testing, a testing strategy involving an interactive CLI that guides the creation of test cases for 
+increase the failure rate by making it easy to create new tests
+express cases clearly and concicely
+have instant feedback when a test is broken
+Generate cases combinatorially and permutatively
+populate expected results by prompt
+provide information about test counts
+integrates with code coverage tools effectively
+provides useful information on failures
+allows you to focus on one thing at a time 
 
 ### Installation
 
@@ -43,8 +46,49 @@ export function run(args:Argument):Result{
 
 run the tests
 
-```
-> gentlest
+``` bash
+$ gentlest
 ```
 
+``` bash
+$ gentlest -i 
+```
+
+will begin an interactive prompt.
+
+```
+<current situation> ~ <current test case> -|
+```
+
+
+```
+-| help
+
+Commands:
+
+    help [command...]  Provides help for a given command.
+    exit               Exits application.
+    test [options]     Executes tests
+    show [options]     information about current position
+    next               Move to next case
+    restart            go back to the beginning
+```
+
+from here we can run tests.
+
+```
+-| test
+
+Running single case
+-0-
+status: passing
+
+```
+
+### Workflows
+
+tight cycle testing
+test -> develop 
+
+stage feature -> check regression 
 

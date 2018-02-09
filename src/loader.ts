@@ -46,6 +46,16 @@ export class Loader {
 
     }
 
+    loadGenerators():Promise<{[type:string]:GeneratorFactory}> {
+
+    }
+
+    loadValidators():Promise<{[type:string]: ValidatorFactory} {
+
+    }
+
+    
+
 
 
 }
